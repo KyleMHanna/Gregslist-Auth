@@ -8,7 +8,7 @@ export class HousesController extends BaseController {
     super('api/houses')
     this.router
       .get('', this.getHouses)
-      .get('/:carId', this.getHouse)
+      .get('/:houseId', this.getHouse)
       .use(Auth0Provider.getAuthorizedUserInfo) // middleware
       .post('', this.createHouse)
       .delete('/:houseId', this.removeHouse)
