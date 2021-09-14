@@ -4,17 +4,17 @@ import { api } from '../Services/AxiosService.js'
 
 class CarsService {
   async deleteCar(carId) {
-    await api.delete(carId)
+    await api.delete('api/cars/' + carId)
     ProxyState.cars = ProxyState.cars.filter(c => c.id !== carId)
   }
 
   async addCar(carData) {
-    const res = await api.post('', carData)
+    const res = await api.post('api/cars/', carData)
     ProxyState.cars = [...ProxyState.cars, new Car(res.data)]
   }
 
   async getCars() {
-    const response = await api.get()
+    const response = await api.get('api/cars/')
     ProxyState.cars = response.data.map(c => new Car(c))
   }
 }

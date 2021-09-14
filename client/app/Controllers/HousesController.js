@@ -1,5 +1,5 @@
 import { ProxyState } from '../AppState.js'
-import { getHouseFormTemplate } from '../forms/houseform.js'
+import { getHouseFormTemplate } from '../forms/HouseForm.js'
 import { houseService } from '../Services/HouseService.js'
 
 function _drawHouses() {

@@ -1,6 +1,6 @@
 import { ProxyState } from '../AppState.js'
-import { getCarFormTemplate } from '../forms/carform.js'
-import { carsService } from '../Services/CarsService.js'
+import { getCarFormTemplate } from '../forms/Carform.js'
+import { carsService } from '../Services/CarService.js'
 
 function _drawCars() {
   let template = ''

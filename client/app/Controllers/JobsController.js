@@ -1,6 +1,6 @@
 import { ProxyState } from '../AppState.js'
 import { jobService } from '../Services/JobService.js'
-import { getJobFormTemplate } from '../forms/jobform.js'
+import { getJobFormTemplate } from '../forms/Jobform.js'
 
 function _drawJobs() {
   let template = ''
