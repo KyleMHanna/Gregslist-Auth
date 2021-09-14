@@ -52,6 +52,76 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid">
+      <div class="row py-2">
+        <div class="col-lg-2 sidebar">
+          <ul class="list-group nav">
+            <li class="list-group-item nav-link selectable" onclick="app.carsController.showCars()">
+              Cars
+            </li>
+            <li class="list-group-item nav-link selectable" onclick="app.housesController.showHouses()">
+              Houses
+            </li>
+
+            <li class="list-group-item nav-link selectable" onclick="app.jobsController.showJobs()">Jobs</li>
+          </ul>
+        </div>
+        <div class="col-lg-10 main-content">
+          <div class="row">
+            <div class="col text-end" id="controls">
+              <!-- Listing controls go here -->
+            </div>
+          </div>
+          <div class="row" id="listings">
+            <!-- Listings here -->
+          </div>
+          <div class="row">
+            <!-- forms go here -->
+            <div class="col-lg-8 m-auto" id="forms">
+              <form class="bg-white rounded p-3 shadow visually-hidden" onsubmit="app.carsController.addCar()"
+                id="car-form">
+                <div class="form-group">
+                  <label for="make" class="">Make:</label>
+                  <select name="make" id="make" required class="form-control">
+                    <option disabled selected value="">Please Choose your car make</option> 
+                    <option>Honda</option>
+                    <option>Hyundai</option>
+                    <option>Tesla</option>
+                    <option>Toyota</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="model" class="">Model:</label>
+                  <input type="text" class="form-control" name="model" id="model" required>
+                </div>
+                <div class="form-group">
+                  <label for="price" class="">Price:</label>
+                  <input type="number" class="form-control" name="price" id="price" min="0" max="9999999">
+                </div>
+                <div class="form-group">
+                  <label for="year" class="">year:</label>
+                  <input type="year" class="form-control" name="year" id="year">
+                </div>
+                <div class="form-group">
+                  <label for="description" class="">description:</label>
+                  <textarea type="text" class="form-control" name="description" id="description" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="imgUrl" class="">img:</label>
+                  <input type="url" class="form-control" name="imgUrl" id="imgUrl" required>
+                </div>
+                <div class="button-group my-3">
+                  <button type="reset" class="btn btn-secondary">clear</button>
+                  <button type="submit" class="btn btn-primary">submit</button>
+                </div>
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="container-fluid bg-dark text-light">
     <div class="row text-center">
