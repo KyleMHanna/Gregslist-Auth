@@ -1,9 +1,6 @@
 import { ProxyState } from '../AppState.js'
 import { Car } from '../Models/Car.js'
-
-const api = axios.create({
-  baseURL: 'https://bcw-sandbox.herokuapp.com/api/cars'
-})
+import { api } from '../Services/AxiosService.js'
 
 class CarsService {
   async deleteCar(carId) {

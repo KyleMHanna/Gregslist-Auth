@@ -1,9 +1,6 @@
 import { ProxyState } from '../AppState.js'
 import { Job } from '../Models/Job.js'
-
-const api = axios.create({
-  baseURL: 'https://bcw-sandbox.herokuapp.com/api/jobs'
-})
+import { api } from '../Services/AxiosService.js'
 
 class JobService {
   async deleteJob(jobId) {

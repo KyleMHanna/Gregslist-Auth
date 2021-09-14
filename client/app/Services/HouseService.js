@@ -1,9 +1,6 @@
 import { ProxyState } from '../AppState.js'
 import { House } from '../Models/House.js'
-
-const api = axios.create({
-  baseURL: 'https://bcw-sandbox.herokuapp.com/api/houses'
-})
+import { api } from '../Services/AxiosService.js'
 
 class HouseService {
   async deleteHouse(houseId) {
