@@ -30,7 +30,7 @@ export class CarsController {
       year: form.year.value,
       price: form.price.value,
       description: form.description.value,
-      imgUrl: form.imgUrl.value
+      img: form.img.value
     }
 
     try {
