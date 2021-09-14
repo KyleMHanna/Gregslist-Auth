@@ -26,7 +26,7 @@ export class HousesController extends BaseController {
 
   async getHouse(req, res, next) {
     try {
-      const house = await housesService.getHouseById(req.params.carId)
+      const house = await housesService.getHouseById(req.params.houseId)
       res.send(house)
     } catch (error) {
       next(error)
