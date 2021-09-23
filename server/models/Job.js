@@ -3,12 +3,12 @@ const Schema = mongoose.Schema
 
 export const JobSchema = new Schema(
   {
-    Rate: { type: Number, required: true, min: 0 },
-    JobTitle: { type: String, required: true, min: 0 },
-    Company: { type: String, required: true, min: 0 },
-    Hours: { type: Number, required: true, min: 0 },
-    description: { type: String, required: true },
-    creatorId: { type: Schema.Types.ObjectId, ref: 'Account', required: true }
+    Rate: { type: Number, min: 0 },
+    JobTitle: { type: String, min: 0 },
+    Company: { type: String, min: 0 },
+    Hours: { type: Number, min: 0 },
+    description: { type: String },
+    creatorId: { type: Schema.Types.ObjectId, ref: 'Account' }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 
