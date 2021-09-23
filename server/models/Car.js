@@ -6,9 +6,9 @@ export const CarSchema = new Schema(
     make: {
       type: String,
       required: [true, 'Who makes it?'],
-      minlength: 3,
+      minlength: 3
       // enum: ['honda', 'hyundai', 'ford', 'tesla'],
-      lowercase: true
+
     },
     model: { type: String, required: true },
     price: { type: Number, required: true, min: 0 },
